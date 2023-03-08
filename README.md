@@ -38,3 +38,17 @@ EasyAirtableTable.fromConfig({
   tableId: 'YOUR_TABLE_ID',
 })
 ```
+# Usage
+### Find All
+
+```ts
+import { EasyAirtableTable } from 'easy-airtable';
+
+const config = {
+  apiKey: 'YOUR_SECRET_API_TOKEN',
+  baseId: 'YOUR_BASE_ID',
+  tableId: 'YOUR_TABLE_ID',
+}
+const table = EasyAirtableTable.fromConfig(config);
+await table.findAll();
+```
