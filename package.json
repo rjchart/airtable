@@ -1,14 +1,22 @@
 {
-  "name": "@jhrhee/airtable",
-  "version": "1.0.0",
+  "name": "easy-airtable",
+  "version": "1.1.2",
   "description": "more easier airtable",
-  "main": "dist/airtable.service.js",
-  "types": "dist/airtable.service.d.ts",
+  "main": "dist/easy-airtable.js",
+  "types": "dist/easy-airtable.d.ts",
   "license": "MIT",
   "author": "jhrhee <rjchaos@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjchart/airtable.git"
+  },
+  "keywords": ["airtable", "productivity", "database", "spreadsheet"],
   "scripts": {
     "build": "tsc",
     "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/rjchart/airtable/issues"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
