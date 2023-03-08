@@ -40,7 +40,7 @@ EasyAirtableTable.fromConfig({
 ```
 # Usage
 ### Find All
-
+find all records in table
 ```ts
 import { EasyAirtableTable } from 'easy-airtable';
 
@@ -50,5 +50,18 @@ const config = {
   tableId: 'YOUR_TABLE_ID',
 }
 const table = EasyAirtableTable.fromConfig(config);
-await table.findAll();
+const allRecords = await table.findAll();
+```
+### Find
+find all records in specific conditions in table
+```ts
+import { EasyAirtableTable } from 'easy-airtable';
+
+const config = {
+  apiKey: 'YOUR_SECRET_API_TOKEN',
+  baseId: 'YOUR_BASE_ID',
+  tableId: 'YOUR_TABLE_ID',
+}
+const table = EasyAirtableTable.fromConfig(config);
+const allRecords = await table.findBy({ 'FIELD_NAME1': 'MATCHING_VALUE1', 'FIELD_NAME2': 'MATCHING_VALUE2' });
 ```
