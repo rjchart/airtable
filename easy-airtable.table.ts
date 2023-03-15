@@ -31,7 +31,7 @@ export class EasyAirtableTable {
     return this.table.find(id);
   }
 
-  findBy(where: Record<string, IAirtableValue>, options?: QueryParams<FieldSet>): Promise<Records<any>> {
+  findBy(where: Record<string, IAirtableValue>, options?: Omit<QueryParams<FieldSet>, 'filterByFormula'>): Promise<Records<any>> {
     return this.table.select({
       filterByFormula: this.policy.mapJsonToFormula(where),
       ...options,
